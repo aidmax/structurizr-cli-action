@@ -1,7 +1,7 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  structurizr-cli:
     runs-on: ubuntu-latest
     name: Run structurizr-cli
     steps:
@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Hello world action step
+      - name: Run structurizr-cli action
         uses: ./
         id: test
         with:
