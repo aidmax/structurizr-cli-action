@@ -43,7 +43,11 @@ runs:
     - ${{ inputs.secret }}
     - '-workspace'
     - ${{ inputs.workspace }}
+    - '-docs'
     - ${{ inputs.docs }}
+    - '-adrs'
     - ${{ inputs.adrs }}
+    - '-url'
     - ${{ inputs.url }}
+    - '-passphrase'
     - ${{ inputs.passphrase }}
