@@ -35,9 +35,13 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.command }}
+    - '-id'
     - ${{ inputs.id }}
+    - '-key'
     - ${{ inputs.key }}
+    - '-secret'
     - ${{ inputs.secret }}
+    - '-workspace'
     - ${{ inputs.workspace }}
     - ${{ inputs.docs }}
     - ${{ inputs.adrs }}
