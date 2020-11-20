@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run structurizr-cli action
-        uses: actions/structurizr-cli-action
+        uses: aidmax/structurizr-cli-action
         id: test
         with:
           id: # required
