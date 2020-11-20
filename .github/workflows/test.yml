@@ -1,0 +1,19 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Run structurizr-cli
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Hello world action step
+        uses: ./
+        id: test
+        with:
+          id: ${{ secrets.STZR_ID }}
+          key: ${{ secrets.STZR_API_KEY }}
+          secret: ${{ secrets.STZR_API_SECRET }}
+          workspace: ./tests/workspace.dsl

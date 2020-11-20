@@ -1,0 +1,45 @@
+name: 'structurizr-cli-action'
+description: 'Runs structurizr command line application'
+inputs:
+  command:
+    description: 'Command argument (optional; defaults to push)'
+    required: false
+    default: push
+  id:
+    description: 'The workspace ID (required)'
+    required: true
+  key:
+    description: 'The workspace API key (required)'
+    required: true
+  secret:
+    description: 'The workspace API secret (required)'
+    required: true
+  workspace:
+    description: 'The path to the workspace JSON file/DSL file(s) (required)'
+    required: true
+  docs:
+    description: 'The path to the directory containing Markdown/AsciiDoc files to be published (optional)'
+    required: false
+  adrs:
+    description: 'The path to the directory containing ADRs (optional)'
+    required: false
+  url:
+    description: 'The Structurizr API URL (optional; defaults to https://api.structurizr.com)'
+    required: false
+    default: 'https://api.structurizr.com'
+  passphrase:
+    description: 'The passphrase to use (optional; only required if client-side encryption enabled on the workspace)'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
+    - ${{ inputs.id }}
+    - ${{ inputs.key }}
+    - ${{ inputs.secret }}
+    - ${{ inputs.workspace }}
+    - ${{ inputs.docs }}
+    - ${{ inputs.adrs }}
+    - ${{ inputs.url }}
+    - ${{ inputs.passphrase }}
