@@ -1,6 +1,6 @@
 workspace "Getting Started" "This is a model of my software system." {
 
-    !adrs doc/adrs
+    !adrs doc/adr
     !docs doc/docs
 
     model {
