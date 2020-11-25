@@ -1,10 +1,6 @@
 name: 'structurizr-cli-action'
 description: 'Runs structurizr command line application'
 inputs:
-  command:
-    description: 'Command argument (optional; defaults to push)'
-    required: false
-    default: push
   id:
     description: 'The workspace ID (required)'
     required: true
@@ -34,7 +30,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.command }}
+    - 'push'
     - '-id'
     - ${{ inputs.id }}
     - '-key'
