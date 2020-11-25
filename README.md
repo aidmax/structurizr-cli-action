@@ -1,6 +1,13 @@
-# Structurizr-cli Action
+# structurizr-cli GitHub Action
 
-This action allows you to run `structurizr-cli`.
+This GitHub action allows you to run [structurizr-cli](https://github.com/structurizr/cli), a command line utility for [Structurizr](https://structurizr.com/) that allows you to create software architecture models based upon the [C4 model](https://c4model.com/) using a textual [domain specific language (DSL)](https://github.com/structurizr/dsl).
+
+Currently, the action supports the following functionality:
+
+- __Push__ content to a Structurizr workspace (the cloud service or an on-premises installation)
+  - A model and views defined using the [Structurizr DSL](https://github.com/structurizr/dsl)
+  - Markdown/AsciiDoc documentation
+  - Architecture Decision Records (ADRs)
 
 ## Usage
 
@@ -26,10 +33,15 @@ jobs:
         uses: aidmax/structurizr-cli-action
         id: test
         with:
-          id: # required
-          key: # required
-          secret: # required
-          workspace: # required
+          id: # The workspace ID (required)
+          key: # The workspace API key (required)
+          secret: # The workspace API secret (required)
+          workspace: # The path to the workspace JSON file/DSL file(s) (required)
+          # optional parameter
+          docs: # The path to the directory containing Markdown/AsciiDoc files to be published (optional)
+          adrs: # The path to the directory containing ADRs (optional)
+          url: # The Structurizr API URL (optional; defaults to https://api.structurizr.com)
+          passphrase: # The passphrase to use (optional; only required if client-side encryption enabled on the workspace)
 ```
 
 ## License

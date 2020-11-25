@@ -1,5 +1,8 @@
 workspace "Getting Started" "This is a model of my software system." {
 
+    !adrs doc/adrs
+    !docs doc/docs
+
     model {
         user = person "User" "A user of my software system."
         softwareSystem = softwareSystem "Software System" "My software system."
