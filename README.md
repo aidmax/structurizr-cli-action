@@ -1,6 +1,6 @@
 # structurizr-cli GitHub Action
 
-This GitHub action allows you to run [structurizr-cli](https://github.com/structurizr/cli), a command line utility for [Structurizr](https://structurizr.com/) that allows you to create software architecture models based upon the [C4 model](https://c4model.com/) using a textual [domain specific language (DSL)](https://github.com/structurizr/dsl).
+This GitHub action allows you to run [structurizr-cli](https://github.com/structurizr/cli), a command line utility for [Structurizr](https://structurizr.com/) that lets you create software architecture models based upon the [C4 model](https://c4model.com/) using a textual [domain specific language (DSL)](https://github.com/structurizr/dsl).
 
 Currently, the action supports the following functionality:
 
@@ -37,7 +37,8 @@ jobs:
           key: # The workspace API key (required)
           secret: # The workspace API secret (required)
           workspace: # The path to the workspace JSON file/DSL file(s) (required)
-          # optional parameter
+
+          # optional parameters
           docs: # The path to the directory containing Markdown/AsciiDoc files to be published (optional)
           adrs: # The path to the directory containing ADRs (optional)
           url: # The Structurizr API URL (optional; defaults to https://api.structurizr.com)
