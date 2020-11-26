@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run structurizr-cli action
-        uses: aidmax/structurizr-cli-action
+        uses: aidmax/structurizr-cli-action@v0.0.2
         id: test
         with:
           id: # The workspace ID (required)
