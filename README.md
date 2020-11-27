@@ -1,4 +1,5 @@
-[![test](https://github.com/aidmax/structurizr-cli-action/workflows/test/badge.svg)
+
+[!test](https://github.com/aidmax/structurizr-cli-action/workflows/test/badge.svg)
 
 # structurizr-cli GitHub Action
 
