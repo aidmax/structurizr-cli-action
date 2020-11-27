@@ -1,9 +1,10 @@
+name: release
+
 on:
   push:
     tags:
       - 'v*'
 
-name: Create Release
 
 jobs:
   build:
