@@ -1,5 +1,9 @@
 name: 'structurizr-cli-action'
 description: 'Runs structurizr command line application'
+author: 'Maksim Milykh'
+branding:
+  icon: 'copy'
+  color: 'blue'
 inputs:
   id:
     description: 'The workspace ID (required)'
