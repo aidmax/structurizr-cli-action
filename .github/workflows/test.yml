@@ -20,12 +20,7 @@ jobs:
       - name: CVE scan image
         uses: docker://docker.io/aquasec/trivy:latest
         with:
-          args: |
-            --cache-dir /var/lib/trivy
-            --no-progress
-            --exit-code 1
-            --severity MEDIUM,HIGH,CRITICAL
-            ${{ steps.build.outputs.image }}
+          args: --cache-dir /var/lib/trivy --no-progress --exit-code 1 --severity MEDIUM,HIGH,CRITICAL ${{ steps.build.outputs.image }}
 
       - name: Run structurizr-cli action
         uses: ./
