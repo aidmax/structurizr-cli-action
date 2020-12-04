@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk8:alpine-jre
 
-ENV STRUCTURIZR_VERSION 1.5.1
+ENV STRUCTURIZR_VERSION 1.6.0
 
 # Create app directory
 WORKDIR /root/structurizr
