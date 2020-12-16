@@ -1,7 +1,7 @@
 name: Get latest upstream release version
-on:
-  schedule:
-    - cron:  '0 10 * * *'
+on: [push]
+#  schedule:
+#    - cron:  '0 10 * * *'
 
 jobs:
   get-version:
