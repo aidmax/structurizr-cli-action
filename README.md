@@ -47,6 +47,10 @@ jobs:
           passphrase: # The passphrase to use (optional; only required if client-side encryption enabled on the workspace)
 ```
 
+## Details
+
+This action is based upon the Dockerfile created and maintained here
+<https://github.com/aidmax/structurizr-cli-docker>
 ## License
 
 The Dockerfile and associated scripts and documentation in this project are released under the [MIT](license).

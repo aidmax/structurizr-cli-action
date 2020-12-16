@@ -10,17 +10,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Build an image
-        id: build
+      - name: Pull the image
         run: |
-          IMAGE=test/structurizr-cli-action:${GITHUB_SHA}
-          docker build -t ${IMAGE} .
-          echo "::set-output name=image::$IMAGE"
-
-      - name: CVE scan image
-        uses: docker://docker.io/aquasec/trivy:latest
-        with:
-          args: --cache-dir /var/lib/trivy --no-progress --exit-code 1 --severity MEDIUM,HIGH,CRITICAL ${{ steps.build.outputs.image }}
+          docker pull ghcr.io/aidmax/structurizr-cli-docker:latest
 
       - name: Run structurizr-cli action
         uses: ./

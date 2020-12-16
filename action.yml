@@ -32,7 +32,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://ghcr.io/aidmax/structurizr-cli-docker:latest'
   args:
     - 'push'
     - '-id'
