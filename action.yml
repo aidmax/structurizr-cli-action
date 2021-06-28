@@ -5,6 +5,10 @@ branding:
   icon: 'copy'
   color: 'blue'
 inputs:
+  action:
+    description: 'Action'
+    required: true
+    default: push
   id:
     description: 'The workspace ID (required)'
     required: true
@@ -34,7 +38,7 @@ runs:
   using: 'docker'
   image: 'docker://ghcr.io/aidmax/structurizr-cli-docker:latest'
   args:
-    - 'push'
+    - ${{ inputs.action }}
     - '-id'
     - ${{ inputs.id }}
     - '-key'
