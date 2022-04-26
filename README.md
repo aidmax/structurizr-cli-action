@@ -41,8 +41,6 @@ jobs:
           workspace: # The path to the workspace JSON file/DSL file(s) (required)
 
           # optional parameters
-          docs: # The path to the directory containing Markdown/AsciiDoc files to be published (optional)
-          adrs: # The path to the directory containing ADRs (optional)
           url: # The Structurizr API URL (optional; defaults to https://api.structurizr.com)
           passphrase: # The passphrase to use (optional; only required if client-side encryption enabled on the workspace)
 ```
