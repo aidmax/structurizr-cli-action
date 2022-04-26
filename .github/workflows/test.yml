@@ -10,6 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Pull the image
+        run: |
+          docker pull ghcr.io/aidmax/structurizr-cli-docker:latest
+
       - name: Run structurizr-cli action
         uses: ./
         id: test
