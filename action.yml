@@ -30,6 +30,12 @@ inputs:
   passphrase:
     description: 'The passphrase to use (optional; only required if client-side encryption enabled on the workspace)'
     required: false
+  merge:
+    description: 'Whether to merge layout information from the remote workspace (optional: defaults to true)'
+    required: false
+  archive:
+    description: 'Whether to store the previous version of the remote workspace (optional; default to true)'
+    required: false
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/aidmax/structurizr-cli-docker:latest'
@@ -47,3 +53,7 @@ runs:
     - ${{ inputs.url }}
     - '-passphrase'
     - ${{ inputs.passphrase }}
+    - '-merge'
+    - ${{ inputs.merge }}
+    - '-archive'
+    - ${{ inputs.archive }}
