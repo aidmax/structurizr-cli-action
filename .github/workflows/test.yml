@@ -18,3 +18,6 @@ jobs:
           key: ${{ secrets.STZR_API_KEY }}
           secret: ${{ secrets.STZR_API_SECRET }}
           workspace: ./tests/workspace.dsl
+          url: https://api.structurizr.com
+          merge: false
+          archive: false
