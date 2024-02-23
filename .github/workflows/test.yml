@@ -15,7 +15,7 @@ jobs:
         id: push
         with:
           command: push
-          workspace_id: '-id ${{ secrets.STZR_ID }}'
+          workspace_id: -id ${{ secrets.STZR_ID }}
           key: '-key ${{ secrets.STZR_API_KEY }}'
           secret: '-secret ${{ secrets.STZR_API_SECRET }}'
           workspace_file: '-workspace ./tests/workspace.dsl'
