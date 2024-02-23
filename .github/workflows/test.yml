@@ -14,10 +14,11 @@ jobs:
         uses: ./
         id: test
         with:
-          id: ${{ secrets.STZR_ID }}
+          command: push
+          workspace_id: ${{ secrets.STZR_ID }}
           key: ${{ secrets.STZR_API_KEY }}
           secret: ${{ secrets.STZR_API_SECRET }}
-          workspace: ./tests/workspace.dsl
+          workspace_file: ./tests/workspace.dsl
           url: https://api.structurizr.com
           merge: false
           archive: false
