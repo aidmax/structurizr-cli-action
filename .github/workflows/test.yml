@@ -10,14 +10,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Run structurizr-cli action
+      - name: Run structurizr-cli command [Push]
         uses: ./
-        id: test
+        id: push
         with:
-          id: ${{ secrets.STZR_ID }}
+          command: push
+          workspace_id: ${{ secrets.STZR_ID }}
           key: ${{ secrets.STZR_API_KEY }}
           secret: ${{ secrets.STZR_API_SECRET }}
-          workspace: ./tests/workspace.dsl
-          url: https://api.structurizr.com
-          merge: false
-          archive: false
+          workspace_file_param: -workspace
+          workspace_file: ./tests/workspace.dsl
+
+      - name: Run structurizr-cli command [Pull]
+        uses: ./
+        id: pull
+        with:
+          command: pull
+          workspace_id: ${{ secrets.STZR_ID }}
+          key: ${{ secrets.STZR_API_KEY }}
+          secret: ${{ secrets.STZR_API_SECRET }}
