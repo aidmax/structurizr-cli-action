@@ -15,7 +15,6 @@ inputs:
     description: 'The workspace API secret'
   workspace_file_param:
     description: Static parameter
-    default: ""
   workspace_file:
     description: 'The path to the workspace JSON file/DSL file(s)'
 runs:
