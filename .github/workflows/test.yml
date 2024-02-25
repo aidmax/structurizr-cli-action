@@ -15,10 +15,7 @@ jobs:
         id: push
         with:
           command: push
-          workspace_id: -id ${{ secrets.STZR_ID }}
-          key: '-key ${{ secrets.STZR_API_KEY }}'
-          secret: '-secret ${{ secrets.STZR_API_SECRET }}'
-          workspace_file: '-workspace ./tests/workspace.dsl'
-          url: '-url https://api.structurizr.com'
-          merge: '-merge false'
-          archive: '-archive false'
+          workspace_id: ${{ secrets.STZR_ID }}
+          key: ${{ secrets.STZR_API_KEY }}
+          secret: ${{ secrets.STZR_API_SECRET }}
+          workspace_file: ./tests/workspace.dsl
