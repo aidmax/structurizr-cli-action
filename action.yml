@@ -7,26 +7,27 @@ branding:
 inputs:
   command:
     description: 'Command'
-  workspace_param:
-    description: Static parameter
-    default: -id
   workspace_id:
     description: 'The workspace ID'
-  key_param:
-    description: Static parameter
-    default: -key
   key:
     description: 'The workspace API key'
-  secret_param:
-    description: Static parameter
-    default: -secret
   secret:
     description: 'The workspace API secret'
   workspace_file_param:
     description: Static parameter
-    default: -workspace
+    default: ""
   workspace_file:
     description: 'The path to the workspace JSON file/DSL file(s)'
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/aidmax/structurizr-cli-docker:latest'
+  args:
+   - ${{ inputs.command }}
+   - '-id'
+   - ${{ inputs.id }}
+   - '-key'
+   - ${{ inputs.key }}
+   - '-secret'
+   - ${{ inputs.secret }}
+   - ${{ inputs.workspace_file_param }}
+   - ${{ inputs.workspace_file }}

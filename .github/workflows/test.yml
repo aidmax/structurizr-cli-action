@@ -18,4 +18,5 @@ jobs:
           workspace_id: ${{ secrets.STZR_ID }}
           key: ${{ secrets.STZR_API_KEY }}
           secret: ${{ secrets.STZR_API_SECRET }}
+          workspace_file_param: -workspace
           workspace_file: ./tests/workspace.dsl
