@@ -20,7 +20,7 @@ inputs:
     description: 'The path to the workspace JSON file/DSL file(s)'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/aidmax/structurizr-cli-docker:latest'
+  image: 'docker://structurizr/cli:latest'
   args:
    - ${{ inputs.command }}
    - '-id'
