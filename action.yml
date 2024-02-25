@@ -24,7 +24,7 @@ runs:
   args:
    - ${{ inputs.command }}
    - '-id'
-   - ${{ inputs.id }}
+   - ${{ inputs.workspace_id }}
    - '-key'
    - ${{ inputs.key }}
    - '-secret'
