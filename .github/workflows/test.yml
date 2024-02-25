@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Run structurizr-cli action [Push]
+      - name: Run structurizr-cli command [Push]
         uses: ./
         id: push
         with:
@@ -21,7 +21,7 @@ jobs:
           workspace_file_param: -workspace
           workspace_file: ./tests/workspace.dsl
 
-      - name: Run structurizr-cli action [Pull]
+      - name: Run structurizr-cli command [Pull]
         uses: ./
         id: pull
         with:
