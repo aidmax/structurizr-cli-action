@@ -4,6 +4,40 @@ author: 'Maksim Milykh'
 branding:
   icon: 'copy'
   color: 'blue'
+inputs:
+  command:
+    description: 'Command'
+  workspace_id:
+    description: 'The workspace ID'
+  key:
+    description: 'The workspace API key'
+  secret:
+    description: 'The workspace API secret'
+  workspace_file:
+    description: 'The path to the workspace JSON file/DSL file(s)'
+  docs:
+    description: 'The path to the directory containing Markdown/AsciiDoc files to be published'
+  adrs:
+    description: 'The path to the directory containing ADRs'
+  url:
+    description: 'The Structurizr API URL (optional; defaults to https://api.structurizr.com)'
+    default: 'https://api.structurizr.com'
+  passphrase:
+    description: 'The passphrase to use (optional; only required if client-side encryption enabled on the workspace)'
+  merge:
+    description: 'Whether to merge layout information from the remote workspace'
+  archive:
+    description: 'Whether to store the previous version of the remote workspace (optional; default to true)'
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/aidmax/structurizr-cli-docker:latest'
+  args:
+    - ${{ inputs.command }}
+    - ${{ inputs.workspace_id }}
+    - ${{ inputs.key }}
+    - ${{ inputs.secret }}
+    - ${{ inputs.workspace_file }}
+    - ${{ inputs.url }}
+    - ${{ inputs.passphrase }}
+    - ${{ inputs.merge }}
+    - ${{ inputs.archive }}
