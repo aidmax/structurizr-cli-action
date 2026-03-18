@@ -10,6 +10,10 @@ workspace "Getting Started" "This is a model of my software system." {
         user -> softwareSystem "Uses"
     }
 
+    configuration {
+        scope softwaresystem
+    }
+
     views {
         systemContext softwareSystem "SystemContext" "An example of a System Context diagram." {
             include *
