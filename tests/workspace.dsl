@@ -3,6 +3,10 @@ workspace "Getting Started" "This is a model of my software system." {
     !adrs doc/adr
     !docs doc/docs
 
+    configuration {
+        scope softwaresystem
+    }
+
     model {
         user = person "User" "A user of my software system."
         softwareSystem = softwareSystem "Software System" "My software system."

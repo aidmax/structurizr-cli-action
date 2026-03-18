@@ -7,6 +7,7 @@ This GitHub action allows you to run [structurizr-cli](https://github.com/struct
 Currently, the action supports the following functionality:
 
 - __Push__ content to a Structurizr workspace (the cloud service or an on-premises installation)
+- __Pull__ content from Structurizr (the cloud service or an on-premises installation)
   - A model and views defined using the [Structurizr DSL](https://github.com/structurizr/dsl)
   - Markdown/AsciiDoc documentation
   - Architecture Decision Records (ADRs)
